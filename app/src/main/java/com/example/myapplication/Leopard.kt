@@ -1,15 +1,7 @@
 package com.example.myapplication
 
-class Leopard: Animal, Predator {
-
-    constructor(name: String, power: Byte, luck: Byte, health: Int) : super(name, power, luck, health) {
-        super.name = name
-        this.power = power
-        if (luck in 1..1)
-            this.luck = luck
-        else throw Exception("luck - значение удачи животного от 0 до 1")
-        this.health = health
-    }
+class Leopard(name: String, power: Byte, luck: Float, health: Int):
+    Animal(name, power, luck, health), Predator {
 
     override fun hide() {
         print("tssss!")
@@ -17,7 +9,7 @@ class Leopard: Animal, Predator {
 
     override fun sharpAttack(rival: Animal) {
         this.hide()
-        this.health += rival.power * rival.luck * this.luck
+        this.health += (rival.power * rival.luck * this.luck).toInt()
         this.attack(rival)
     }
 

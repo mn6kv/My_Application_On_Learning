@@ -8,10 +8,10 @@ open class Animal {
 
     var name: String
     var power: Byte
-    var luck: Byte
+    var luck: Float
     protected var health: Int
 
-    constructor(name: String, power: Byte, luck: Byte, health: Int) {
+    constructor(name: String, power: Byte, luck: Float, health: Int) {
         this.name = name
         this.power = power
         if (luck in 1..1)
@@ -25,9 +25,9 @@ open class Animal {
     }
 
     fun attack(rival: Animal): String {
-        rival.health -= this.power * this.luck
+        rival.health -= (this.power * this.luck).toInt()
         if (rival.isAlive())
-            this.health -= rival.power * rival.luck * this.luck
+            this.health -= (rival.power * rival.luck * this.luck).toInt()
         return this.name + "attacked" + rival.name + "\n" + this.name + "'s health: " + this.health +
                 rival.name + "'s health: " + rival.health
     }

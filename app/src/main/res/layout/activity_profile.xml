@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    tools:ignore="ExtraText">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <ImageButton
+        android:id="@+id/btnProfileBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvUsersName"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ic_baseline_clear_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUsersName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="Личные данные"
+        android:textSize="24dp"
+        android:textColor="#000"
+        app:layout_constraintStart_toEndOf="@+id/btnProfileBack"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/edtSecondName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Фамилия"
+        android:textColor="@android:color/darker_gray"
+        />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:text="Имя"
+        android:textColor="@android:color/darker_gray"
+        />
+    <EditText
+        android:id="@+id/edtOtchestvo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:text="Отчество"
+        android:textColor="@android:color/darker_gray"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RadioButton
+        android:id="@+id/rbMale"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Мужской"
+        android:layout_marginTop="300dp"
+        />
+    <RadioButton
+        android:id="@+id/rbFemale"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Женский"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="200dp"
+        />
+    </RadioGroup>
+
+<!--    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="680dp"
+        android:text="Edit"
+        />-->
+
+</RelativeLayout>
