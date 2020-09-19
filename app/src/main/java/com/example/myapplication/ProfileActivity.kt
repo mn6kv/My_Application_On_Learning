@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
@@ -12,7 +13,7 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var edtSecName: EditText
     private lateinit var edtName: EditText
     private lateinit var edtOtchestvo: EditText
-//    private lateinit var btnEditProfile: EditText
+//    private lateinit var btnProfileEdit: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +25,15 @@ class ProfileActivity : AppCompatActivity() {
         //toolbar!!.title = "Личные данные"
         //toolbar.setDisplayHomeAsUpEnabled(true)
 
+        val intent = Intent(this, MainActivity::class.java)
+
+        /*toolbar?.apply {
+            setNavigationIcon(R.drawable.ic_baseline_clear_24)
+            setNavigationOnClickListener{
+                startActivity(intent)
+            }
+        }*/
+
         edtSecName = findViewById<EditText>(R.id.edtSecondName)
         edtName = findViewById<EditText>(R.id.edtName)
         edtOtchestvo = findViewById<EditText>(R.id.edtOtchestvo)
@@ -31,27 +41,47 @@ class ProfileActivity : AppCompatActivity() {
         rbMale = findViewById(R.id.rbMale)
         rbFemale = findViewById(R.id.rbFemale)
 
-//        btnEditProfile = findViewById(R.id.btnEditProfile)
+        block(edtSecName)
+        block(edtName)
+        block(edtOtchestvo)
+        block(rbMale)
+        block(rbFemale)
 
-        edtBlock(edtSecName)
-        edtBlock(edtName)
-        edtBlock(edtOtchestvo)
+        val btnProfileEdit = findViewById<Button>(R.id.btnProfileEdit)
+        btnProfileEdit.setOnClickListener{
+            unlock(edtSecName)
+            unlock(edtName)
+            unlock(edtOtchestvo)
+            unlock(rbMale)
+            unlock(rbFemale)
+        }
 
-/*        btnEditProfile.setOnClickListener{
-            edtUnblock(edtSecName)
-            edtUnblock(edtName)
-            edtUnblock(edtOtchestvo)
-        }*/
+        val btnProfileBack = findViewById<ImageButton>(R.id.btnProfileBack)
+        btnProfileBack.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
-    fun edtBlock(edt: EditText) {
+    fun block(edt: EditText) {
         edt.isFocusable = false
         edt.isLongClickable = false
     }
 
-    fun edtUnblock(edt: EditText) {
+    fun unlock(edt: EditText) {
         edt.isFocusable = true
         edt.isLongClickable = true
+        edt.isFocusableInTouchMode = true
+    }
+
+    fun block(rb: RadioButton) {
+        rb.isEnabled = false
+        rb.isClickable = false
+    }
+
+    fun unlock(rb: RadioButton) {
+        rb.isEnabled = true
+        rb.isClickable = true
     }
 
 /*    override fun onCheckedChanged(btn: CompoundButton, ischecked: Boolean) {
