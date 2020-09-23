@@ -13,6 +13,8 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var edtSecName: EditText
     private lateinit var edtName: EditText
     private lateinit var edtOtchestvo: EditText
+    private lateinit var edtBirthfate: EditText
+    private var flagBtnEditProfile: Boolean = false
 //    private lateinit var btnProfileEdit: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,33 +29,33 @@ class ProfileActivity : AppCompatActivity() {
 
         val intent = Intent(this, MainActivity::class.java)
 
-        /*toolbar?.apply {
+/*        toolbar?.apply {
             setNavigationIcon(R.drawable.ic_baseline_clear_24)
             setNavigationOnClickListener{
                 startActivity(intent)
             }
         }*/
 
-        edtSecName = findViewById<EditText>(R.id.edtSecondName)
-        edtName = findViewById<EditText>(R.id.edtName)
-        edtOtchestvo = findViewById<EditText>(R.id.edtOtchestvo)
+        edtSecName = findViewById(R.id.edtSecondName)
+        edtName = findViewById(R.id.edtName)
+        edtOtchestvo = findViewById(R.id.edtOtchestvo)
+        edtBirthfate = findViewById(R.id.edtBirthdate)
 
         rbMale = findViewById(R.id.rbMale)
         rbFemale = findViewById(R.id.rbFemale)
 
-        block(edtSecName)
-        block(edtName)
-        block(edtOtchestvo)
-        block(rbMale)
-        block(rbFemale)
+        blockAll()
 
         val btnProfileEdit = findViewById<Button>(R.id.btnProfileEdit)
         btnProfileEdit.setOnClickListener{
-            unlock(edtSecName)
-            unlock(edtName)
-            unlock(edtOtchestvo)
-            unlock(rbMale)
-            unlock(rbFemale)
+            if (!flagBtnEditProfile) {
+                unlockAll()
+                flagBtnEditProfile = true
+            }
+            else {
+                blockAll()
+                flagBtnEditProfile = false
+            }
         }
 
         val btnProfileBack = findViewById<ImageButton>(R.id.btnProfileBack)
@@ -63,25 +65,43 @@ class ProfileActivity : AppCompatActivity() {
         }
     }
 
-    fun block(edt: EditText) {
+    private fun block(edt: EditText) {
         edt.isFocusable = false
         edt.isLongClickable = false
     }
 
-    fun unlock(edt: EditText) {
+    private fun unlock(edt: EditText) {
         edt.isFocusable = true
         edt.isLongClickable = true
         edt.isFocusableInTouchMode = true
     }
 
-    fun block(rb: RadioButton) {
+    private fun block(rb: RadioButton) {
         rb.isEnabled = false
         rb.isClickable = false
     }
 
-    fun unlock(rb: RadioButton) {
+    private fun unlock(rb: RadioButton) {
         rb.isEnabled = true
         rb.isClickable = true
+    }
+
+    fun blockAll() {
+        block(edtSecName)
+        block(edtName)
+        block(edtOtchestvo)
+        block(rbMale)
+        block(rbFemale)
+        block(edtBirthfate)
+    }
+
+    fun unlockAll() {
+        unlock(edtSecName)
+        unlock(edtName)
+        unlock(edtOtchestvo)
+        unlock(rbMale)
+        unlock(rbFemale)
+        unlock(edtBirthfate)
     }
 
 /*    override fun onCheckedChanged(btn: CompoundButton, ischecked: Boolean) {
