@@ -7,10 +7,10 @@
     tools:context=".ProfileActivity"
     tools:ignore="ExtraText">
 
-<!--    <include
+    <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar"/>-->
-
+        layout="@layout/toolbar"/>
+<!--
     <ImageButton
         android:id="@+id/btnProfileBack"
         android:layout_width="40dp"
@@ -18,9 +18,9 @@
         android:layout_alignBottom="@+id/tvUsersName"
         android:background="@drawable/ic_baseline_clear_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <TextView
+<!--    <TextView
         android:id="@+id/tvUsersName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:textColor="#000"
         app:layout_constraintStart_toEndOf="@+id/btnProfileBack"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        />-->
 
     <EditText
         android:id="@+id/edtSecondName"
@@ -38,7 +38,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:hint="Фамилия"
-        android:textColor="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:inputType="textPersonName"
@@ -53,7 +52,6 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="30dp"
         android:hint="Имя"
-        android:textColor="@android:color/darker_gray"
         android:inputType="textPersonName"
         />
     <EditText
@@ -64,7 +62,6 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="30dp"
         android:hint="Отчество"
-        android:textColor="@android:color/darker_gray"
         android:inputType="textPersonName"
         />
 
@@ -98,6 +95,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/rgMF"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
         android:inputType="date"
         android:hint="01.01.0001"
         />
@@ -111,6 +109,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/btn_classic"
+        />
+
+    <EditText
+        android:id="@+id/edtGrazhdanstvo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edtBirthdate"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="Гражданство"
+        android:layout_marginTop="30dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
