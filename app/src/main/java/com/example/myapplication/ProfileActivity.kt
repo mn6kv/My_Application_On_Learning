@@ -63,13 +63,23 @@ class ProfileActivity : AppCompatActivity() {
 
         val btnProfileBack = findViewById<Button>(R.id.btnBack3)
         btnProfileBack.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            onBackPressed()
         }
 
         val btnGoToView = findViewById<Button>(R.id.btnGoToViewProfile)
         btnGoToView.setOnClickListener{
             val intent = Intent(this, ViewProfileActivity::class.java)
+            intent.putExtra("secName", edtSecName.text.toString())
+            intent.putExtra("name", edtName.text.toString())
+            intent.putExtra("otchestvo", edtOtchestvo.text.toString())
+            intent.putExtra("birthdate", edtBirthdate.text.toString())
+            intent.putExtra("grazhd", edtGrazhd.text.toString())
+            startActivity(intent)
+        }
+
+        val btnImplicitIntent = findViewById<Button>(R.id.btnimplicitIntent)
+        btnImplicitIntent.setOnClickListener{
+            val intent = Intent("MyApplication.app.ImplicitIntentViewProfile")
             intent.putExtra("secName", edtSecName.text.toString())
             intent.putExtra("name", edtName.text.toString())
             intent.putExtra("otchestvo", edtOtchestvo.text.toString())
