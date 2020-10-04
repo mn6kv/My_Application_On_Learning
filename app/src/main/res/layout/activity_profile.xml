@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    tools:ignore="ExtraText">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+<!--
+    <ImageButton
+        android:id="@+id/btnProfileBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/tvUsersName"
+        android:background="@drawable/ic_baseline_clear_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView
+        android:id="@+id/tvUsersName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="Личные данные"
+        android:textSize="24dp"
+        android:textColor="#000"
+        app:layout_constraintStart_toEndOf="@+id/btnProfileBack"
+        app:layout_constraintTop_toTopOf="parent"
+        />-->
+
+    <EditText
+        android:id="@+id/edtSecondName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:hint="Фамилия"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:inputType="textPersonName"
+        android:textColorHighlight="#000"
+        />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edtSecondName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:hint="Имя"
+        android:inputType="textPersonName"
+        />
+    <EditText
+        android:id="@+id/edtOtchestvo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edtName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:hint="Отчество"
+        android:inputType="textPersonName"
+        />
+
+
+    <RadioGroup
+        android:id="@+id/rgMF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edtOtchestvo"
+        app:layout_constraintStart_toStartOf="parent">
+    <RadioButton
+        android:id="@+id/rbMale"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Мужской"
+        android:layout_marginTop="30dp"
+        />
+    <RadioButton
+        android:id="@+id/rbFemale"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Женский"
+        android:layout_marginTop="-30dp"
+        android:layout_marginStart="200dp"
+        />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edtBirthdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rgMF"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:inputType="date"
+        android:hint="01.01.0001"
+        />
+
+    <Button
+        android:id="@+id/btnProfileEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Редактировать данные"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/btn_classic"
+        />
+
+    <EditText
+        android:id="@+id/edtGrazhdanstvo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edtBirthdate"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="Гражданство"
+        android:layout_marginTop="30dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
