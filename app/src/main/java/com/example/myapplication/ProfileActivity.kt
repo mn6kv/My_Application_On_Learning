@@ -77,16 +77,16 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btnImplicitIntent = findViewById<Button>(R.id.btnimplicitIntent)
-        btnImplicitIntent.setOnClickListener{
-            val intent = Intent("MyApplication.app.ImplicitIntentViewProfile")
-            intent.putExtra("secName", edtSecName.text.toString())
-            intent.putExtra("name", edtName.text.toString())
-            intent.putExtra("otchestvo", edtOtchestvo.text.toString())
-            intent.putExtra("birthdate", edtBirthdate.text.toString())
-            intent.putExtra("grazhd", edtGrazhd.text.toString())
-            startActivity(intent)
-        }
+//        val btnImplicitIntent = findViewById<Button>(R.id.btnimplicitIntent)
+//        btnImplicitIntent.setOnClickListener{
+//            val intent = Intent("MyApplication.app.ImplicitIntentViewProfile")
+//            intent.putExtra("secName", edtSecName.text.toString())
+//            intent.putExtra("name", edtName.text.toString())
+//            intent.putExtra("otchestvo", edtOtchestvo.text.toString())
+//            intent.putExtra("birthdate", edtBirthdate.text.toString())
+//            intent.putExtra("grazhd", edtGrazhd.text.toString())
+//            startActivity(intent)
+//        }
     }
 
 //    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
