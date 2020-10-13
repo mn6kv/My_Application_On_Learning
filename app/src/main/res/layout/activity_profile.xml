@@ -16,7 +16,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignBottom="@+id/tvUsersName"
-        android:background="@drawable/ic_baseline_clear_24"
+        android:background="@drawable/ic_baseline_clear_24_active"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />-->
 

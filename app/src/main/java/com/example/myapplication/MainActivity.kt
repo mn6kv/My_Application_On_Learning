@@ -30,6 +30,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent("MyApplication.app.ImplicitIntentViewProfile")
             startActivityForResult(intent, RequestCode.REQUEST_CODE_NICKNAME)
         }
+
+        btnGoToFragmets.setOnClickListener {
+            val intent = Intent(this, FragmentsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

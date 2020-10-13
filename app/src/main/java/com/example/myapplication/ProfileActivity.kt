@@ -24,7 +24,7 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 //        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         //setSupportActionBar(toolbar);
-/*        supportActionBar?.homeAsUpIndicator = R.drawable.ic_baseline_clear_24
+/*        supportActionBar?.homeAsUpIndicator = R.drawable.ic_baseline_clear_24_active
         supportActionBar?.displayHomeAsUpEnabled = true*/
         //toolbar!!.title = "Личные данные"
         //toolbar.setDisplayHomeAsUpEnabled(true)
@@ -32,7 +32,7 @@ class ProfileActivity : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
 
 /*        toolbar?.apply {
-            setNavigationIcon(R.drawable.ic_baseline_clear_24)
+            setNavigationIcon(R.drawable.ic_baseline_clear_24_active)
             setNavigationOnClickListener{
                 startActivity(intent)
             }
