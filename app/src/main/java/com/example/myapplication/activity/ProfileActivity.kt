@@ -1,12 +1,10 @@
-package com.example.myapplication
+package com.example.myapplication.activity
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.*
+import com.example.myapplication.R
 
 class ProfileActivity : AppCompatActivity() {
 
