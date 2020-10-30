@@ -41,6 +41,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, BookListActivity::class.java)
             startActivity(intent)
         }
+
+        btnGoToBtmNavigation.setOnClickListener {
+            val intent = Intent(this, BtmNavActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

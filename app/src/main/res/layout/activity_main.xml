@@ -67,5 +67,18 @@
         android:layout_marginTop="4dp"
         />
 
+    <Button
+        android:id="@+id/btnGoToBtmNavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoToFragmets"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/btn_classic_without_corners"
+        android:text="go to bottom navigation"
+        android:textColor="@android:color/white"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

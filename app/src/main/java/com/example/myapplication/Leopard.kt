@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import kotlin.Int
+
 class Leopard(name: String, power: Byte, luck: Float, health: Int):
     Animal(name, power, luck, health), Predator {
 

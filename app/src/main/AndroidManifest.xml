@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.BookInfoActivity"></activity>
+        <activity android:name=".activity.BtmNavActivity"></activity>
+        <activity android:name=".activity.BookInfoActivity" />
         <activity android:name=".activity.BookListActivity" />
         <activity android:name=".activity.FragmentsActivity" />
         <activity android:name=".FragmentActivity" />

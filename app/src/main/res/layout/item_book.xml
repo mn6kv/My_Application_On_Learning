@@ -31,5 +31,15 @@
         android:textSize="14sp"
         />
 
+    <ImageView
+        android:id="@+id/btnDeleteBook"
+        android:layout_width="32dp"
+        android:layout_height="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/ic_baseline_delete_24"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

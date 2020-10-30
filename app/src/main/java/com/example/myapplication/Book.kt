@@ -1,9 +1,13 @@
 package com.example.myapplication
 
+import kotlin.Int
+
 data class Book(
     val id: Int,
-    val name: String,
-    val author: String,
+    var name: String,
+    var author: String,
     val desc: String,
-    val photo: Int
-)
+    val photo: Int,
+    val deleteBtn: Int
+){
+}

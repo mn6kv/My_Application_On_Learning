@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import kotlin.Int
+
 // power - значение силы животного от 1 до 128
 // luck - значение удачи животного от 0 до 1
 // health - значение здоровья животного от 1 до 128
